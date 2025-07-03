@@ -1,1 +1,66 @@
-aa
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projeto Final - Exemplos JavaScript</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Exemplos de JavaScript</h1>
+
+  <div class="menu">
+    <button onclick="mostrarExemplo(1)">Exemplo 1 - Lista de Frutas</button>
+    <button onclick="mostrarExemplo(2)">Exemplo 2 - Formulário</button>
+    <button onclick="mostrarExemplo(3)">Exemplo 3 - Jogo Secreto</button>
+  </div>
+
+  <div id="exemplo1" class="exemplo">
+    <h2>Métodos de Arrays com Frutas</h2>
+    <input type="text" id="frutaInput" placeholder="Digite uma fruta" />
+    <button onclick="adicionarFruta()">Adicionar</button>
+    <p id="listaFrutas">[ ]</p>
+    <div class="botoes">
+      <button onclick="metodo('push')">Push</button>
+      <button onclick="metodo('pop')">Pop</button>
+      <button onclick="metodo('shift')">Shift</button>
+      <button onclick="metodo('unshift')">Unshift</button>
+      <button onclick="verificarBanana()">Includes('banana')</button>
+      <button onclick="mostrarIndex('uva')">IndexOf('uva')</button>
+      <button onclick="mostrarJoin()">Join</button>
+      <button onclick="mostrarSlice()">Slice</button>
+      <button onclick="fazerSplice()">Splice</button>
+      <button onclick="mapMaiusculas()">Map</button>
+      <button onclick="filtrarGrandes()">Filter</button>
+    </div>
+    <pre id="saida"></pre>
+  </div>
+
+  <div id="exemplo2" class="exemplo">
+    <h2>Formulário com Exportação para TXT</h2>
+    <form id="formulario">
+      <label for="valor1">Valor 1:</label>
+      <input type="text" id="valor1" required><br>
+      <label for="valor2">Valor 2:</label>
+      <input type="text" id="valor2" required><br>
+      <label for="valor3">Valor 3:</label>
+      <input type="text" id="valor3" required><br>
+      <label for="valor4">Valor 4:</label>
+      <input type="text" id="valor4" required><br>
+      <label for="valor5">Valor 5:</label>
+      <input type="text" id="valor5" required><br>
+      <button type="submit">Salvar em TXT</button>
+    </form>
+  </div>
+
+  <div id="exemplo3" class="exemplo">
+    <h2>Jogo do Número Secreto</h2>
+    <p>Escolha um número entre 1 e 10</p>
+    <input type="number" min="1" max="10" id="chuteInput">
+    <button onclick="verificarChute()">Chutar</button>
+    <button onclick="reiniciarJogo()" id="reiniciar" disabled>Novo jogo</button>
+    <p id="mensagem"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
